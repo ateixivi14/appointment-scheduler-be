@@ -1,0 +1,14 @@
+
+spring:
+  datasource:
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+jwt:
+  public-key: "MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAq8BySFr//7QIHt++j//MQYbpL5nvR/6fkO3cspQhKv9k8PvgFo8S3rbvz28fAeBSDDJL0AOsqSmYqBYKYc0Qd3RHVcK0gDxK+FE0pi5oU+kxxHSeS7l0GB34o5PQ8B043u6AcqxD/cGXzRnm6w5ZCY+wesdKFIDmZn8Ue5M4zujQoOhfqVXW9JXt7a7TB8ZwvI5g+4UvIL+yKIFUdbgX0Dm5JGUIp1cVfTIYq806JUmNn0DnQz9vKjBIXBJQjuL8eHlsfro0lkeDt52NsL79vgA0gXcswG1/J3r7v6Ua/2nqEZLjFQ2U6APLWFTkLBxQjHtxhb5l34PeaZWjcSMUzLljC2Xq+fU2qBOoXYUPsfKnaZVpS5wNaAlCCikUHj0f7bWWGBPmAz6MyJFYvlpa6m4YBtzalDWuROxZ7swhpOz5YM609MGgx7zIEwV56DgPX/SsWF7HcE4F94fciSeNYf1FrtBj0/Y6ANd9ubyF37/zwR62zWxN7lvv8rXq29CkD2KYbcQSPSRtreWADp3m0/LJ6tOFKi6IAPgSRtHgs9/eGM+TEolih0S6DOszNq3aPnLTQKnbjzIcQKKtGMvYk01T+tEx3tfQles4/cVO2v5+1q7JG1DopsAmCpfkGye3bqmxfykhor5N4Ds7oqWXqMCQtcZaD8ResQomWYpPdGsCAwEAAQ=="
