@@ -8,6 +8,6 @@ import java.time.LocalDateTime;
 public class DateChecker {
     
     public boolean isDateValid(LocalDateTime date){
-        return LocalDateTime.now().isBefore(date);
+        return date != null && LocalDateTime.now().isBefore(date);
     }
 }

@@ -12,7 +12,7 @@ public class AppointmentRegisterService {
     
     private final AppointmentRepository appointmentRepository;
     
-    private final com.training.appointmentscheduler.service.UserJwtValidator userValidator;
+    private final UserJwtValidator userValidator;
     
     private final DateChecker dateChecker;
     
@@ -27,9 +27,10 @@ public class AppointmentRegisterService {
         }
 
         Appointment newAppointment = Appointment.builder()
+                .id(1L)
                 .appointmentDate(registerAppointmentRequest.getAppointmentDate())
                 .description(registerAppointmentRequest.getAppointmentDescription())
-                .sendNotification(true)
+                .sendNotification(registerAppointmentRequest.isHasNotification())
                 .build();
         
         appointmentRepository.save(newAppointment);

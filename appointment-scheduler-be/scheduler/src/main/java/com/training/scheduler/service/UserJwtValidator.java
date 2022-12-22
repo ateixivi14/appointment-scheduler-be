@@ -1,4 +1,4 @@
-package com.training.appointmentscheduler.service;
+package com.training.scheduler.service;
 
 import org.springframework.stereotype.Component;
 
