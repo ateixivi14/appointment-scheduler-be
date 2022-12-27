@@ -15,6 +15,8 @@ public class AppointmentRegisterService {
     private final UserJwtValidator userValidator;
     
     private final DateChecker dateChecker;
+
+    private final RabbitMQSender rabbitMQSender;
     
     public void registerAppointment(RegisterAppointmentRequest registerAppointmentRequest) {
         
@@ -32,6 +34,8 @@ public class AppointmentRegisterService {
                 .description(registerAppointmentRequest.getAppointmentDescription())
                 .sendNotification(registerAppointmentRequest.isHasNotification())
                 .build();
+
+        rabbitMQSender.send("caca");
         
         appointmentRepository.save(newAppointment);
     }

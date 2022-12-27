@@ -28,6 +28,8 @@ dependencies {
     testImplementation("org.springframework.amqp:spring-rabbit-test")
     testImplementation("org.springframework.security:spring-security-test")
     runtimeOnly("org.postgresql:postgresql")
+    implementation("com.rabbitmq:amqp-client:5.16.0")
+
 }
 
 tasks.withType<Test> {
