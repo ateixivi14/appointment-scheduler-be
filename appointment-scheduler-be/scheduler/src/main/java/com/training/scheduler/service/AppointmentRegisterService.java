@@ -34,8 +34,6 @@ public class AppointmentRegisterService {
                 .description(registerAppointmentRequest.getAppointmentDescription())
                 .sendNotification(registerAppointmentRequest.isHasNotification())
                 .build();
-
-        rabbitMQSender.send("caca");
         
         appointmentRepository.save(newAppointment);
     }

@@ -13,9 +13,10 @@ public class RabbitMQSender {
 
     private final AmqpTemplate amqpTemplate;
 
-    public void send(String message) {
+    @Scheduled(cron = "0 0 6 * * *")
+    public void send() {
         String customMessage = "This is a sample message";
-        amqpTemplate.convertAndSend(customMessage+ message);
+        amqpTemplate.convertAndSend(customMessage);
         System.out.println(customMessage);
     }
 }
