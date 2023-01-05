@@ -11,11 +11,13 @@ spring:
     hibernate:
       ddl-auto: create
   rabbitmq:
+    exchanges: internal.exchange
+    routing-keys: internal.notification.routing-key
     host: localhost
     port: 5672
     username: guest
     password: guest
-    queue: notification-messages-queue
+    queue: notification.queue
 
 
 
