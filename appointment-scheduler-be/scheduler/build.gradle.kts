@@ -1,6 +1,6 @@
 plugins {
     java
-    id("org.springframework.boot") version "3.0.0"
+    id("org.springframework.boot") version "2.7.0"
     id("io.spring.dependency-management") version "1.1.0"
 }
 
@@ -29,7 +29,9 @@ dependencies {
     testImplementation("org.springframework.security:spring-security-test")
     runtimeOnly("org.postgresql:postgresql")
     implementation("com.rabbitmq:amqp-client:5.16.0")
-
+    implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
+    implementation("org.springframework.boot:spring-boot-starter-security")
+    implementation("org.springframework.security:spring-security-config:5.7.3")
 }
 
 tasks.withType<Test> {

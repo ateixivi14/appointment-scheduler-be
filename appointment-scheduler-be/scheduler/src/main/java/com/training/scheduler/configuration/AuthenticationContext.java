@@ -8,7 +8,7 @@ public class AuthenticationContext {
         currentSession.set(token);
     }
 
-    public static String setJwtToken() {
+    public static String getJwtToken() {
         return currentSession.get();
     }
 

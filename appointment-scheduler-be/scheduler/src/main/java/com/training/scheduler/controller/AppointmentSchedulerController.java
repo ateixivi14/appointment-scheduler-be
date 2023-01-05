@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.text.ParseException;
+
 @RestController
 @RequestMapping("/appointment")
 @RequiredArgsConstructor
@@ -15,7 +17,7 @@ public class AppointmentSchedulerController {
     private final AppointmentRegisterService appointmentRegisterService;
     
     @PostMapping
-    public void registerEvent(@RequestBody RegisterAppointmentRequest eventRequest) {
+    public void registerEvent(@RequestBody RegisterAppointmentRequest eventRequest) throws ParseException {
         appointmentRegisterService.registerAppointment(eventRequest);
     }
 }
