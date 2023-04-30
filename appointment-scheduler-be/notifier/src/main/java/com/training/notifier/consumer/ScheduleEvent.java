@@ -13,4 +13,6 @@ import java.io.Serializable;
 public class ScheduleEvent {
 
     private String message;
+    private String userName;
+    private String description;
 }

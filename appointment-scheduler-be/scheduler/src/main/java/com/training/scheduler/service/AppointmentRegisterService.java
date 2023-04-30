@@ -32,6 +32,7 @@ public class AppointmentRegisterService {
         }
 
         Appointment newAppointment = Appointment.builder()
+                .username(registerAppointmentRequest.getUsername())
                 .appointmentDate(registerAppointmentRequest.getAppointmentDate())
                 .description(registerAppointmentRequest.getAppointmentDescription())
                 .sendNotification(registerAppointmentRequest.isHasNotification())

@@ -26,6 +26,8 @@ public class RegisterAppointmentRequest {
     
     private String appointmentName;
 
+    private String username;
+
     private boolean hasNotification;
 
 }
