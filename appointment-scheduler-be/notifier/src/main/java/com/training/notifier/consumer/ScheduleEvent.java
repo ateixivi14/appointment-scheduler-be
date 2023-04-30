@@ -8,8 +8,9 @@ import java.io.Serializable;
 
 @Data
 @Builder
-@RequiredArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 public class ScheduleEvent {
 
-    private final String message;
+    private String message;
 }
